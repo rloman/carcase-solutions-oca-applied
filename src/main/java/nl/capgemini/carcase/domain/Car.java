@@ -6,6 +6,10 @@ public class Car {
    private String licencePlate;
    private double price;
 
+   public Car(String licencePlate) {
+      this.licencePlate = licencePlate;
+   }
+
    public int getSpeed() {
       return speed;
    }
