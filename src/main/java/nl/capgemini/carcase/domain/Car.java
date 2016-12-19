@@ -5,6 +5,7 @@ public class Car {
    private int speed;
    private String licencePlate;
    private double price;
+   private int mileAge;
 
    private Tank tank;
 
@@ -48,14 +49,28 @@ public class Car {
 
    public void drive() {
       if (!this.tank.isEmpty()) {
-
+         this.mileAge++;
+         this.tank.dec();
       }
+   }
 
+   public void drive(int km) {
+      if (this.tank.getCurrentLevel() > km) {
+         this.mileAge += km;
+      }
    }
 
    @Override
    public String toString() {
       return "Car [licencePlate=" + licencePlate + ", price=" + price + "]";
+   }
+
+   public int getMileAge() {
+      return mileAge;
+   }
+
+   public void setMileAge(int mileAge) {
+      this.mileAge = mileAge;
    }
 
 }

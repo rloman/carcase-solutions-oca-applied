@@ -20,6 +20,22 @@ public class Tank {
    }
 
    public boolean isEmpty() {
-      return this.currentLevel == 0;
+      return this.currentLevel == minLevel;
+   }
+
+   public void dec() {
+      if (this.currentLevel > minLevel) {
+         this.currentLevel--;
+      }
+   }
+
+   public void dec(int i) {
+      if (this.currentLevel >= i) {
+         this.currentLevel -= i;
+      }
+   }
+
+   public int getCurrentLevel() {
+      return this.currentLevel;
    }
 }
