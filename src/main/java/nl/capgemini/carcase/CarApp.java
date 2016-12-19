@@ -3,8 +3,18 @@ package nl.capgemini.carcase;
 import java.util.ArrayList;
 import java.util.List;
 
+import nl.capgemini.carcase.domain.Car;
+
 public class CarApp {
    public static void main(String[] args) {
+
+      Car car = new Car();
+
+      System.out.println(car);
+
+   }
+
+   public static void mainExercise1To3() {
       System.out.println("Welcome to my very first car application! Yahoo!");
 
       // exercise 2
