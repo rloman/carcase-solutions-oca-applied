@@ -47,6 +47,12 @@ public class Car {
       this.tank.fill(liters);
    }
 
+   public void fillAlternate(int liters) {
+      while (!this.tank.isEmpty()) {
+         drive();
+      }
+   }
+
    public void drive() {
       if (!this.tank.isEmpty()) {
          this.mileAge++;
