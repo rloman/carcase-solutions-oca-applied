@@ -9,6 +9,8 @@ public class CarApp {
    public static void main(String[] args) {
 
       Car car = new Car();
+      car.setLicencePlate("AA-BB-CC");
+      car.setPrice(25000);
 
       System.out.println(car);
 
