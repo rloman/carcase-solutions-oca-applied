@@ -6,9 +6,12 @@ public class Car {
    private String licencePlate;
    private double price;
 
+   private Tank tank;
+
    public Car(String licencePlate, double price) {
       this.licencePlate = licencePlate;
       this.price = price;
+      this.tank = new Tank();
    }
 
    public int getSpeed() {
@@ -33,6 +36,21 @@ public class Car {
 
    public void setPrice(double price) {
       this.price = price;
+   }
+
+   public void fill() {
+      this.tank.fill();
+   }
+
+   public void fill(int liters) {
+      this.tank.fill(liters);
+   }
+
+   public void drive() {
+      if (!this.tank.isEmpty()) {
+
+      }
+
    }
 
    @Override
