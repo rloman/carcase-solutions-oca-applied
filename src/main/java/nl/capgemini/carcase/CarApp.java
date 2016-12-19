@@ -15,6 +15,25 @@ public class CarApp {
       car.fill();
       car.drive();
       System.out.println(car.getMileAge());
+
+      Car anotherCar = new Car("CC", 23000);
+
+      if (car.equals(anotherCar)) {
+         System.out.println("Equals fails");
+      }
+      else {
+         System.out.println("Equals is OK");
+      }
+
+      Car clone = new Car("AA-BB-CC", 25000);
+
+      if (clone.equals(car)) {
+         System.out.println("Equals OK");
+      }
+      else {
+         System.out.println("Equals fails");
+      }
+
    }
 
    public static void mainExercise1To3() {

@@ -79,4 +79,35 @@ public class Car {
       this.mileAge = mileAge;
    }
 
+   @Override
+   public int hashCode() {
+      final int prime = 31;
+      int result = 1;
+      result = prime * result + ((licencePlate == null) ? 0 : licencePlate.hashCode());
+      return result;
+   }
+
+   @Override
+   public boolean equals(Object obj) {
+      if (this == obj) {
+         return true;
+      }
+      if (obj == null) {
+         return false;
+      }
+      if (!(obj instanceof Car)) {
+         return false;
+      }
+      Car other = (Car) obj;
+      if (licencePlate == null) {
+         if (other.licencePlate != null) {
+            return false;
+         }
+      }
+      else if (!licencePlate.equals(other.licencePlate)) {
+         return false;
+      }
+      return true;
+   }
+
 }
