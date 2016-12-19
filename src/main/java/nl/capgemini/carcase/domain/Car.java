@@ -2,6 +2,9 @@ package nl.capgemini.carcase.domain;
 
 public class Car {
 
+   private static int carCounter = 0;
+   private int id;
+
    private int speed;
    private String licencePlate;
    private double price;
@@ -10,6 +13,7 @@ public class Car {
    private Tank tank;
 
    public Car(String licencePlate, double price) {
+      this.id = carCounter++;
       this.licencePlate = licencePlate;
       this.price = price;
       this.tank = new Tank();
@@ -108,6 +112,10 @@ public class Car {
          return false;
       }
       return true;
+   }
+
+   public int getId() {
+      return id;
    }
 
 }

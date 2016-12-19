@@ -8,30 +8,21 @@ import nl.capgemini.carcase.domain.Car;
 public class CarApp {
    public static void main(String[] args) {
 
-      Car car = new Car("AA-BB-CC", 25000);
+      Car zero = new Car("A", 0);
+      zero.setMileAge(000);
+      Car one = new Car("B", 1);
+      one.setMileAge(100);
+      Car two = new Car("C", 2);
+      two.setMileAge(200);
 
-      System.out.println(car);
+      int[][] usage = new int[][] { { zero.getId(), zero.getMileAge() }, { one.getId(), one.getMileAge() },
+            { two.getId(), two.getMileAge() } };
 
-      car.fill();
-      car.drive();
-      System.out.println(car.getMileAge());
-
-      Car anotherCar = new Car("CC", 23000);
-
-      if (car.equals(anotherCar)) {
-         System.out.println("Equals fails");
-      }
-      else {
-         System.out.println("Equals is OK");
-      }
-
-      Car clone = new Car("AA-BB-CC", 25000);
-
-      if (clone.equals(car)) {
-         System.out.println("Equals OK");
-      }
-      else {
-         System.out.println("Equals fails");
+      for (int[] car : usage) {
+         System.out.println("Car with id " + car[0] + " has driven " + car[1] + " kms");
+         // alternate / better / cleaner
+         // System.out.printf("Car with id %d has driven %d kms %n", car[0],
+         // car[1]);
       }
 
    }
@@ -76,5 +67,38 @@ public class CarApp {
       numberList.stream().forEach(num -> {
          System.out.println(num);
       });
+   }
+
+   public static void mainEquality() {
+      String first = "first";
+      String second = "second";
+
+      if (first.equals(second)) {
+         System.out.println("Failing for String");
+      }
+      first = "second";
+
+      if (first.equals(second)) {
+         System.out.println("Succeeding for String");
+      }
+
+      Car car = new Car("AA-BB-CC", 25000);
+      Car anotherCar = new Car("CC", 23000);
+
+      if (car.equals(anotherCar)) {
+         System.out.println("Equals fails");
+      }
+      else {
+         System.out.println("Equals is OK");
+      }
+
+      Car clone = new Car("AA-BB-CC", 25000);
+
+      if (clone.equals(car)) {
+         System.out.println("Equals OK");
+      }
+      else {
+         System.out.println("Equals fails");
+      }
    }
 }
