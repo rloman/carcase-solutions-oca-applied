@@ -6,8 +6,9 @@ public class Car {
    private String licencePlate;
    private double price;
 
-   public Car(String licencePlate) {
+   public Car(String licencePlate, double price) {
       this.licencePlate = licencePlate;
+      this.price = price;
    }
 
    public int getSpeed() {
