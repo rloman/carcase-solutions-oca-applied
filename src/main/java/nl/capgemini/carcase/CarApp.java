@@ -12,6 +12,9 @@ public class CarApp {
 
       System.out.println(car);
 
+        car.fill();
+      car.drive();
+      System.out.println(car.getMileAge());
    }
 
    public static void mainExercise1To3() {
