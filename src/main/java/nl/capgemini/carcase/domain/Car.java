@@ -1,5 +1,7 @@
 package nl.capgemini.carcase.domain;
 
+import java.time.LocalDate;
+
 public class Car {
 
    private static int carCounter = 0;
@@ -9,6 +11,8 @@ public class Car {
    private String licencePlate;
    private double price;
    private int mileAge;
+
+   private LocalDate registrationDate;
 
    private Tank tank;
 
@@ -116,6 +120,14 @@ public class Car {
 
    public int getId() {
       return id;
+   }
+
+   public LocalDate getRegistrationDate() {
+      return registrationDate;
+   }
+
+   public void setRegistrationDate(LocalDate registrationDate) {
+      this.registrationDate = registrationDate;
    }
 
 }

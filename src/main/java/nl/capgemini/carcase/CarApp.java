@@ -1,5 +1,7 @@
 package nl.capgemini.carcase;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +10,24 @@ import nl.capgemini.carcase.domain.Car;
 public class CarApp {
    public static void main(String[] args) {
 
+      Car car = new Car("AA", 25);
+      car.setRegistrationDate(LocalDate.now());
+
+      car.setRegistrationDate(LocalDate.of(2014, 11, 1));
+
+      Period between = Period.between(car.getRegistrationDate(), LocalDate.now());
+
+      System.out.println(between);
+      // explain what is printed
+
+      System.out.println(between.getYears());
+      System.out.println(between.getMonths());
+      System.out.println(between.getDays());
+
+
+   }
+
+   public static void arrayMain() {
       Car zero = new Car("A", 0);
       zero.setMileAge(000);
       Car one = new Car("B", 1);
@@ -24,7 +44,6 @@ public class CarApp {
          // System.out.printf("Car with id %d has driven %d kms %n", car[0],
          // car[1]);
       }
-
    }
 
    public static void mainExercise1To3() {
