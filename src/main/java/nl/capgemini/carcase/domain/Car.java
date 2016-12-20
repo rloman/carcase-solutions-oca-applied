@@ -23,6 +23,10 @@ public class Car {
       this.tank = new Tank();
    }
 
+   public Car(String licensePlate) {
+      this(licensePlate, 0);
+   }
+
    public int getSpeed() {
       return speed;
    }
