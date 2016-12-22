@@ -2,6 +2,14 @@ package nl.capgemini.carcase.arrays;
 
 public class Application {
 
+   public static String padRight(String s, int n) {
+      return String.format("%1$-" + n + "s", s);
+   }
+
+   public static String padLeft(String s, int n) {
+      return String.format("%1$" + n + "s", s);
+   }
+
    public static void main(String[] args) {
 
       // tables
@@ -14,11 +22,14 @@ public class Application {
          }
       }
 
+      String headerString = "";
       for (int i = 1; i < 11; i++) {
-         System.out.print("Table of:" + i + "\t");
+         headerString += "Table of:" + i + "\t";
       }
-      System.out.println();
-      System.out.println("============================================================================");
+      System.out.println(headerString);
+      String paddedString = padRight("=", headerString.length() + 11 * 4);
+      paddedString = paddedString.replace(' ', '=');
+      System.out.println(paddedString);
       for (int i = 1; i < 11; i++) {
          for (int j = 1; j < 11; j++) {
 
@@ -27,6 +38,7 @@ public class Application {
          }
          System.out.println();
       }
+      System.out.println(paddedString);
 
    }
 
