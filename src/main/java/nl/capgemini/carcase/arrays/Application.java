@@ -18,17 +18,11 @@ public class Application {
          System.out.print("Table of:" + i + "\t");
       }
       System.out.println();
-      int tabCounter = 0;
+      System.out.println("============================================================================");
       for (int i = 1; i < 11; i++) {
-         String tabString = "";
-         for (int tabs = 0; tabs < tabCounter; tabs++) {
-            tabString += "\t";
-         }
-         // System.out.print(tabString);
-         tabCounter++;
          for (int j = 1; j < 11; j++) {
 
-            String result = String.format("%02dx%02d=%03d ", i, j, tables[i][j]);
+            String result = String.format(" %02dx%02d=%03d ", i, j, tables[i][j]);
             System.out.print(result + "\t");
          }
          System.out.println();
