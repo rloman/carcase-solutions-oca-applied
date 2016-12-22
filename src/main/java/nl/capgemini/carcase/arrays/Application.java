@@ -22,7 +22,7 @@ public class Application {
       for (int i = 1; i < 11; i++) {
          for (int j = 1; j < 11; j++) {
 
-            String result = String.format(" %02dx%02d=%03d ", i, j, tables[i][j]);
+            String result = String.format(" %2dx%1d=%2d ", i, j, tables[i][j]);
             System.out.print(result + "\t");
          }
          System.out.println();
