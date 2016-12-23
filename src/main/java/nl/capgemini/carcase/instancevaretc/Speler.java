@@ -19,4 +19,35 @@ public class Speler extends Persoon {
    public static int getSpelerCounter() {
       return spelerCounter;
    }
+
+   public SpelerType getSpelerType() {
+      return spelerType;
+   }
+
+   public int getShirtNummer() {
+      return shirtNummer;
+   }
+
+   @Override
+   public int hashCode() {
+      return shirtNummer;
+   }
+
+   @Override
+   public boolean equals(Object obj) {
+      if (this == obj) {
+         return true;
+      }
+      if (obj == null) {
+         return false;
+      }
+      if (!(obj instanceof Speler)) {
+         return false;
+      }
+      Speler other = (Speler) obj;
+      if (shirtNummer != other.shirtNummer) {
+         return false;
+      }
+      return true;
+   }
 }
