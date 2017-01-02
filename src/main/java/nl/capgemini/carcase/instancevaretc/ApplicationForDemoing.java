@@ -3,7 +3,7 @@ package nl.capgemini.carcase.instancevaretc;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Application {
+public class ApplicationForDemoing {
 
    public static void main(String[] args) {
       Speler anja = new Speler(SpelerType.SETUPPER, 2);

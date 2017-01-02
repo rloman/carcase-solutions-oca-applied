@@ -1,6 +1,6 @@
-package nl.capgemini.carcase.uml;
+package nl.capgemini.carcase.uml.classical.december;
 
-public class Application {
+public class DemoApplication {
 
    public static void main(String[] args) {
 

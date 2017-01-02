@@ -1,4 +1,4 @@
-package nl.capgemini.carcase.uml;
+package nl.capgemini.carcase.uml.classical.december;
 
 public abstract class Vehicle {
 
